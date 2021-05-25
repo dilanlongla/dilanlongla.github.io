@@ -20,12 +20,8 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 // Create the email and send the message
 $to = 'afurlongla@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nFirst name: $fname\n\nLast name: $lname\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: dilanlongla@yahoo.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers = "From: afurlongla@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";   
-?>
-<script>console.log('we are here js');</script>
-<?php
-echo 'we are here php';
 mail($to,$subject,$email_body,$headers);
 return true;         
 
